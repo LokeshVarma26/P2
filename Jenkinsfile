@@ -3,7 +3,7 @@ pipeline {
     parameters {
         choice(name: 'Branch', choices: ['master','main'], description: 'pick')
     }
-    Stages {
+    stages {
         stage('GIT') {
             steps {
                git url: 'https://github.com/spring-projects/spring-petclinic.git',
