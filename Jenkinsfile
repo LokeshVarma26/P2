@@ -5,14 +5,14 @@ pipeline {
     }
     Stages {
         stage('GIT') {
-            steps{
-            git url: 'https://github.com/spring-projects/spring-petclinic.git'
-            branch: 'main'
+            steps {
+               git url: 'https://github.com/spring-projects/spring-petclinic.git',
+                   branch: 'main'
             }
             }
         stage('build') {
-            steps{
-            sh 'mvn package'
+            steps {
+              sh 'mvn package'
             }
              
         }
